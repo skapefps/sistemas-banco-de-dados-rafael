@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="evento-er" name="Modelo ER - Eventos">
+    <mxGraphModel dx="1500" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ENTIDADES -->
+        <mxCell id="participante" value="Participante" style="shape=rectangle;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="evento" value="Evento" style="shape=rectangle;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="inscricao" value="Inscrição" style="shape=rectangle;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="pagamento" value="Pagamento" style="shape=rectangle;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="500" y="500" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS PARTICIPANTE -->
+        <mxCell id="p1" value="id (PK)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2" value="nome" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="20" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3" value="email (UNIQUE)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="p4" value="telefone" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="20" y="280" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS EVENTO -->
+        <mxCell id="e1" value="id (PK)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="680" y="100" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="nome" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="680" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="descricao" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="680" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="local" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="680" y="280" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="data" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="680" y="340" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS INSCRICAO -->
+        <mxCell id="i1" value="id (PK)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="300" y="380" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="i2" value="id_evento (FK)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="300" y="440" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="i3" value="id_participante (FK)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="300" y="500" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="i4" value="data_inscricao" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="i5" value="status" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="300" y="620" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ATRIBUTOS PAGAMENTO -->
+        <mxCell id="pa1" value="id (PK)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="500" y="580" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pa2" value="id_inscricao (FK, UNIQUE)" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="500" y="640" width="160" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pa3" value="valor" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="500" y="700" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pa4" value="data_pagamento" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="500" y="760" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="pa5" value="status" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="500" y="820" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIONAMENTOS -->
+        <mxCell id="r1" value="1:N" style="shape=rhombus;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="250" y="180" width="60" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" value="1:N" style="shape=rhombus;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="60" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" value="1:1" style="shape=rhombus;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="420" y="400" width="60" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- CONEXÕES -->
+        <!-- Participante -> R1 -->
+        <mxCell id="c1" edge="1" parent="1" source="participante" target="r1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="r1" target="inscricao">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Evento -> R2 -->
+        <mxCell id="c3" edge="1" parent="1" source="evento" target="r2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c4" edge="1" parent="1" source="r2" target="inscricao">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Inscricao -> R3 -> Pagamento -->
+        <mxCell id="c5" edge="1" parent="1" source="inscricao" target="r3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="c6" edge="1" parent="1" source="r3" target="pagamento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
