@@ -118,4 +118,4 @@ SELECT  venda_id,
 FROM vendas_itens
 GROUP BY venda_id
 ORDER BY venda_id ASC;
-)
+
