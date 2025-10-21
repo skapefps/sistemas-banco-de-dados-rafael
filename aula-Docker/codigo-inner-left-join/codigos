@@ -1,0 +1,31 @@
+SELECT
+    p.id AS pessoa_id,
+    p.nome AS pessoa_nome,
+    p.cpf,
+    p.telefone,
+    p.email,
+    pa.numero_cartao AS cartao_plano,
+    pa.data_cadastro AS data_cadastro_plano
+FROM paciente pa
+INNER JOIN pessoa p
+    ON pa.pessoa_id = p.id;
+
+SELECT * FROM pessoa;
+SELECT * FROM paciente;
+SELECT * FROM consulta;
+
+SELECT
+    p.id AS pessoa_id,
+    p.nome AS pessoa_nome,
+    pa.numero_cartao AS numero_cartao,
+    c.id AS consulta_id
+FROM
+    paciente pa
+INNER JOIN pessoa p
+    ON pa.pessoa_id = p.id
+LEFT JOIN consulta c
+    ON c.paciente_id = pa.pessoa_id
+WHERE c.id is NULL;
+
+
+
